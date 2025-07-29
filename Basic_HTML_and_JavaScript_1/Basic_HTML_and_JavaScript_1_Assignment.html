@@ -1,0 +1,60 @@
+<!--Basic_HTML_1.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   	<title>Basic HTML with External JavaScript</title>
+   <meta charset = "utf-8">
+</head>
+
+<body>
+	<!-- Modern CSS instead of deprecated <font> tag -->
+
+  <p style="color: red">This is a paragraph with color name.</p>
+  <p style="color: #00FF00">This is a paragraph with hex code.</p>
+
+  <p style="font-family: Arial; font-size: 10pt">This text is Arial, size 2.</p>
+  <p style="font-family: Verdana; font-size: 14pt">This text is Verdana, size 4.</p>
+  <p style="font-family: Courier; font-size: 18pt">This text is Courier, size 6.</p>
+ 
+  <p><b>This text is bold, </b><i>this text is italicized </i>and <u>this is underlined.</u></p>
+
+  <img src="myimage.jpg" alt="My image" width="200">
+
+  <!-- Script at bottom for better loading practice -->
+<script src="Basic_JavaScript_1.js"></script>
+
+</body>
+
+</html>
+
+//Basic_JavaScript_1.js
+
+alert("Hello, World! This alert is from an external JS file!");
+
+<!--Basic_HTML_2.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <title>Basic HTML 2</title>
+   <meta charset = "utf-8">
+</head>
+
+<body>
+
+  <button onclick="My_First_Function()">Click me!</button>
+  <p id="Irish"></p>
+  <script src="Basic_JavaScript_2.js"></script>
+
+</body>
+
+</html>
+
+//Basic_JavaScript_2.js
+
+function My_First_Function() {
+  var str = "Kiss me, I'm Irish!";
+  var result = str.fontcolor("green");
+  document.getElementById("Irish").innerHTML = result;
+}
