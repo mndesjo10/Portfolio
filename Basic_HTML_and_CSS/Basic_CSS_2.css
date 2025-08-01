@@ -1,0 +1,8 @@
+p {
+ color: snow;
+ background-color: black;
+ font-size: 18px;
+ text-align: center;
+ font-weight: bold;
+ text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}

@@ -1,0 +1,24 @@
+/* CSS_Table.css */
+
+table {
+  border: 1px solid silver; /* D. Border */
+  width: 100%;
+  border-collapse: collapse; /* Optional: collapse borders for a cleaner look */
+}
+th, td {
+  border: 1px solid silver; /* D. Border */
+  padding: 8px;
+  text-align: left;
+}
+thead {
+  background-color: black; /* A. Background color */
+  color: cornsilk; /* B. Font color */
+}
+tbody tr:nth-child(even) {
+  background-color: darkgreen; /* A. Background color for even rows */
+  color: white; /* B. Font color for even rows */
+}
+tbody tr:hover { /* C. Hover selector */
+  background-color:yellow;
+  color: black;
+}

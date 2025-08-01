@@ -1,0 +1,9 @@
+/* CSS_List.css */
+
+ol {
+  list-style-type: upper-roman; /* A. Changes the list-style-type of an ordered list */
+}
+
+ul {
+  list-style-type: square; /* B. Changes the list-style-type of an unordered list */
+}

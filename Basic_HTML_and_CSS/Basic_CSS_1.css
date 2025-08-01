@@ -1,0 +1,19 @@
+/* Style for <p> */
+p {
+  color: purple;
+  text-align: center;
+  }
+
+/* Style for <ol> */
+ol {
+ list-style-type: upper-roman; /* Roman numerals */
+ font-size: 16px;
+ color: green;
+}
+
+/* Style for <ul> */
+ul {
+ list-style-type: square; /* Square bullets */
+ font-size: 16px;
+ color: blue;
+}
