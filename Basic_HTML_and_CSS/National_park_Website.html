@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Explore National Parks</title>
+     <link rel="stylesheet" href="style.css>
+</head>
+<body>
+
+     <header>
+         <h1>Explore National Parks</h1>
+         <nav>
+	     <ul>
+		<li><a href="home">Home</a></li>
+	        <li><a href="#about">About</a></li>
+	        <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#video">Video</a></li>
+	        <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+     </header>
+
+     <section id="home">
+        <h2>Welcome</h2>
+        <p>Discover the beauty of America's National Parks.</p>
+        <img src="national_park_home.jpg" alt="National Park Home Page Image">
+     </section>
+
+     <section id="about">
+        <h2>About National Parks</h2>
+        <p>Learn about the history and importance of preserving our national parks.</p>
+     </section>
+
+     <section id="gallery">
+        <h2>Gallery</h2>
+        <img src="national_park_1.jpg" alt="National Park Image 1">
+        <img src="national_park_2.jpg" alt="National Park Image 2">
+        <img src="national_park_3.jpg" alt="National Park Image 3">
+    </section>
+
+    <section id="video">
+        <h2>Video</h2>
+        <<iframe width="560" height="315" src="https://www.youtube.com/embed/wIvX2R3eQNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit.php" method="post">
+	    <label for="name">Name:</label<br>
+	    <input type="text" id="name" name="name" required><br>
+	    <label for="email">Email":</label><br>
+	    <input type="email" id="email" name="email" required><br>
+	    <label for="message">Message:</label><br>
+	    <textarea id="message" name="message" rows="4" required></textarea><br>
+	    <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 National Parks Website</p>
+    </footer>
+
+</body>
+</html>
