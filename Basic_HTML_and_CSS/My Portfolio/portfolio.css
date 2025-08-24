@@ -430,28 +430,58 @@ footer {
 }
 
 /***** VIDEO STYLING *****/
+/* Background video container */
 #Home {
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Background video */
 #Typing_Video {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    position: relative;
-    z-index: -1;
+    z-index: 1;
+    pointer-events: none;
+    background: black;
+    border: none;
 }
 
+/* Overlay text centered over video */
 .Video_Text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+    width: 80vw;
     text-align: center;
-    width: 80%;
+    z-index: 2;
+    border-radius: 12px;
+}
+
+/* Hide video on mobile */
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+    #Home {
+        height: auto;
+    }
+    .Video_Text {
+        position: static;
+        transform: none;
+        width: 95vw;
+        padding: 10px;
+        background: rgba(0,0,0,0.7);
+    }
 }
 
 /***** TABLE STYLING *****/
