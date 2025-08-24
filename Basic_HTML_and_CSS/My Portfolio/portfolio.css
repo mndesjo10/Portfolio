@@ -1,11 +1,11 @@
 /***** GENERAL STYLING *****/
+ HEAD
 body {
     margin: 0%;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
-}
+    /***** GENERAL STYLING *****/
 
 h1 {
     text-transform: uppercase;
@@ -13,11 +13,11 @@ h1 {
     text-align: center;
     margin-top: 3%;
     color: #1a1a1a;
-}
 
 h1:hover {
     filter: grayscale(5%);
     transform: scale(1.1);/***** GENERAL STYLING *****/
+
 /* Body */
 body {
     margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
@@ -29,10 +29,15 @@ h1 {
     font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
+
     color: #1a1a1a; 
 }
 
 /* Heading 1 element hover effect */
+    color: #1a1a1a; /* Sets the text color of all h1 elements */
+}
+
+/* Heading 1 elements hover effects */
 h1:hover {
     filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
     transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
@@ -58,6 +63,15 @@ p {
 p:hover {
     transition: transform 1s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+    font-size: 20px; /* Sets the font size of paragraph elements */
+    padding-left: 20px; /* Adds padding to the left of the paragraph elements */
+    padding-right: 20px; /* Adds padding to the right of the paragraph elements */
+}
+
+/* Paragraph elements hover effects */
+p:hover {
+    transition: transform 1s; /* This makes the transform effects last 1 second */
+    transform: scale(1.01); /* This makes the paragraph increase slightly in size when hovered over */
 }
 
 /* Center class - this applies to all elements with the class "center" */
@@ -65,10 +79,16 @@ p:hover {
     text-align: center; /* This center aligns the text */
 }
 
-/* Center class hover effect - This only affects the quote, github link, and footer */
+ /* Center class hover effect - This only affects the quote, github link, and footer */
 .center:hover {
     transition: transform 2s; /* This makes the transform effect last 2 seconds */
     transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
+}
+
+/* Center class hover effects - this only affects the quote, github link, and footer */
+.center:hover {
+    transition: transform 2s; /* This makes the transform effects last 2 seconds */
+    transform: scale(1.1); /* This makes the elements with class "center" increase in size 1.1 when hovered over */
 }
 
 /* Anchor elements */
@@ -94,9 +114,11 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
     transition: transform 1s; /* Transition lasts 1 second */
 	transform: scale(1.1); /* Image is increased slightly when hovered over */
+    transition: transform 1s; /* transform lasts 1 second */
+    transform: scale(1.1); /* Image is increased slightly when hovered over */
 }
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
@@ -108,10 +130,16 @@ img:hover {
     }
 }
 
-/* Styling for footer element */
+ /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: white;
+}
+
+/* Styling for footer elements */
+footer {
+    padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
+    background-color: white; /* This sets the background color of the footer to white */
 }
 /***** END OF GENERAL STYLING *****/
 
@@ -130,7 +158,13 @@ footer {
 /* moveNav animation effect for moving the nav bar in from the left of the screen */
 @keyframes moveNav {
     from {left: -100vw;} /* The navbar is starting off screen to the left */
-    to {left: 0vw;} /* This moves the navbar into place on the screen */
+    /* Removed invalid animation property */
+}
+
+/* moveNav animation effect for moving the nav bar in form the left the screen */
+@keyframes moveNav {
+from {left: -100%;} /* The navbar is starting off screen to the left */
+to {left: 0vw;} /* This moves the navbar into place on the screen */
 }
 
 /* Navbar links */
@@ -145,7 +179,7 @@ footer {
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
@@ -159,6 +193,10 @@ footer {
     .Navbar a{
         width: 25%; /* This makes each link take up 1/4 of the navbar */
         font-size: 12px;
+    }
+    .Navbar a {
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px; /* This sets the font size for the navbar links */
     }
 }
 
@@ -176,9 +214,8 @@ footer {
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
-
 /* Formatting for background video */
-#Typing_Video {
+#Typing1_video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
@@ -186,15 +223,65 @@ footer {
     z-index: -1; /* This places the video behind the other elements on the page */
 }
 
-/* Screens that are 576px and smaller will not display the background video */
+ /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
-    #Typing_Video {
+    #Typing1_video {
         display: none;
     }
 }
 
 /* Texts over the video */
 .Video_Text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Screen that are 576px and smaller will not display the background video */
+@media screen and (max-width: 576px) {
+    #Typing1_video {
+        display: none; /* This hides the video on small screens */
+    }
+}
+
+/* Portfolio background video and text overlay styles */
+.Video_Text {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+#Typing1_Video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.Video_Text_Content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}
+
+/* Text over the video */
+.video_text {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
@@ -246,32 +333,331 @@ footer {
     padding-top: 3.5%;
     height: 450px;
 }
+@keyframes moveVideoText {
+    from {top: -100vw;} /* This sets the video text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the video text onto the video */
+}
+/***** END OF VIDEO TEXT STYLING *****/
 
-/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+/***** TABLE STYLING - this section covers the styling of the columns and rows within the table *****/
+* { /* the asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.Column_1 {
+    float: left; /* This specifies that the left column floats on the left side of the page */
+    width: 50%; /* This ensures the column takes up half the page width */
+    padding: 10px; /* This adds padding around the text within the column */
+    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    height: 400px; /* This sets the height of the column 400px - this may need to be adjusted depending on the text you enter */
+    background-color: #f2f2f2; /* This sets the background color of the left column_1 */
+}
+
+/* Screen 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+    overflow-y: auto; /* This adds a vertical scroll bar if the text overflows */
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #4d4d4d;
+}
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+    float: left; /* This specifies that the right column floats on the left side of the page */
+    width: 50%; /* This ensures the column takes up half the page width */
+    padding: 10px; /* This adds padding around the text within the column */
+    padding-top: 1.9%; /* This ensures there is space between the top of the column and our headings */
+    height: 400px; /* This sets the height of the column 400px - this may need to be adjusted depending on the text you enter */
+    background-color: #4d4d4d; /* This sets the background color of the right column_2 */
+}
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%; /* This ensures there is space between the top of the column and our headings */
+    height: 450px; /* This sets the height of the column to 450px - this may need to be adjusted depending on the text you enter */
+}
+
+/* Removed stray curly brace causing syntax error */
 .Row:after {
-	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
-	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
-	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+    content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both; /* This clears any other elements from floating on the left or the right of an element */
+    content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    display: table; /* This display properly specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both; /* This clears any other elements form floating on the left or the right of an element */
+}
+
+/* Cleaned and valid CSS based on user request */
+/***** GENERAL STYLING *****/
+body {
+    margin: 0%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 3%;
+    color: #1a1a1a;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.white-text {
+    color: #fff;
+}
+
+/* Hover effects for input boxes */
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[type=text]:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+.center {
+    text-align: center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/* Moved box-shadow to the correct selector */
+input[type=text]:hover {
+    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+q {
+    font-style: italic;
+}
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+/***** END OF GENERAL STYLING *****/
+
+/***** NAVBAR STYLING *****/
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Avant Garde, Helvetica;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+}
+
+.Navbar a.active {
+    background-color: darkgray;
+}
+/***** END OF NAVBAR STYLING *****/
+
+/***** VIDEO STYLING *****/
+#Typing1_Video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+    #Typing1_Video {
+        display: none;
+    }
+}
+
+.Video_Text {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+/***** END OF VIDEO STYLING *****/
+
+/***** TABLE STYLING *****/
+* {
+    box-sizing: border-box;
+} 
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #4d4d4d;
+}
+
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 /***** END OF TABLE STYLING *****/
 
 /***** CONTACT FORM STYLING *****/
-/* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
-    width: 100%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid #ccc; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
-    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
-/* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2; 
+    padding: 10px;
+    font-family: "Trebuchet MS", Optima;
+}
+/***** END OF CONTACT FORM STYLING *****/
 }
 
 /* Submit button */
@@ -287,6 +673,17 @@ input[type=submit] {
     margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
     margin-right: auto;
     font-family: Perpetua, Rockwell Extra Bold;
+    font-weight: bold; /* Makes the font the submit button to bold */
+    padding: 12px 20px; /* Adds padding to the submit button */
+    border: none; /* Removes the border from the submit button */
+    border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the submit button */
+    display: block; /* Allows the submit button to be centered */
+    margin-left: auto; /* In combination width "margin-right: auto" this centers the submit button */
+    margin-right: auto; /* Centers the submit button */
+    font-family: Perpetua, Rockwell Extra Bold; /* This sets the font family for text within the submit button */
+}
+
 }
 
 /* Hover effect for submit button */
@@ -305,9 +702,6 @@ form {
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
-
-    transition: transform 1s;
-}
 
 .white-text {
     color: #fff;
@@ -430,58 +824,28 @@ footer {
 }
 
 /***** VIDEO STYLING *****/
-/* Background video container */
 #Home {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 }
 
-/* Background video */
-#Typing_Video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+#Typing1_Video {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    z-index: 1;
-    pointer-events: none;
-    background: black;
-    border: none;
+    position: relative;
+    z-index: -1;
 }
 
-/* Overlay text centered over video */
 .Video_Text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 40px 20px;
-    width: 80vw;
+    padding: 20px;
     text-align: center;
-    z-index: 2;
-    border-radius: 12px;
-}
-
-/* Hide video on mobile */
-@media screen and (max-width: 576px) {
-    #Typing_Video {
-        display: none;
-    }
-    #Home {
-        height: auto;
-    }
-    .Video_Text {
-        position: static;
-        transform: none;
-        width: 95vw;
-        padding: 10px;
-        background: rgba(0,0,0,0.7);
-    }
+    width: 80%;
 }
 
 /***** TABLE STYLING *****/
@@ -568,3 +932,4 @@ form {
     padding: 10px;
     font-family: "Trebuchet MS", Optima;
 }
+/***** END OF CONTACT FORM STYLING *****/
